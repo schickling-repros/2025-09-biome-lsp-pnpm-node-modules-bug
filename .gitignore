@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+*.tsbuildinfo
+
+# Build outputs
+dist/
+.output/
+.vercel/
+.netlify/
+
+# IDEs  
+.idea/
+# Note: .vscode/ is included in this repo for reproduction purposes
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+*.log
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Package manager
+.pnpm-debug.log*
+.yarn-integrity
+.npm
+
+# Testing
+coverage/
+test-results/
+playwright-report/

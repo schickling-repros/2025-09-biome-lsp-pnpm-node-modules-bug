@@ -1,0 +1,111 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "packages/**/*.{js,jsx,ts,tsx,json}",
+      "examples/**/*.{js,jsx,ts,tsx,json}",
+      "scripts/**/*.{js,jsx,ts,tsx,json}",
+      "tests/**/*.{js,jsx,ts,tsx,json}",
+      "docs/**/*.{js,jsx,ts,tsx,json,astro}",
+      "*.{js,jsx,ts,tsx,json}",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/.wrangler",
+      "!**/tmp",
+      "!**/.output",
+      "!**/.vercel",
+      "!**/.netlify",
+      "!**/.astro",
+      "!**/.nitro",
+      "!**/.tanstack",
+      "!**/.direnv",
+      "!**/packages/@livestore/wa-sqlite",
+      "!**/playwright-report",
+      "!**/test-results"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noShadowRestrictedNames": "off"
+      },
+      "style": {
+        "noUselessElse": "off",
+        "noNonNullAssertion": "off",
+        "noUnusedTemplateLiteral": "off",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error"
+      },
+      "complexity": {
+        "useArrowFunction": "error",
+        "noBannedTypes": "off",
+        "noUselessTernary": "off"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off"
+      },
+      "correctness": {
+        "noUnusedImports": "warn",
+        "useImportExtensions": "error",
+        "noUnusedLabels": {
+          "level": "warn"
+        },
+        "useYield": "off"
+      },
+      "nursery": {}
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  },
+  "json": {
+    "formatter": {}
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.css", "**/tailwind.css", "**/style.css"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
+    }
+  ]
+}

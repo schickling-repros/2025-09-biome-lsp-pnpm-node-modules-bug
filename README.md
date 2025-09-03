@@ -114,7 +114,7 @@ Use CLI for formatting/linting: `npx biome format --write .`
 
 ## 🐛 Related GitHub Issue
 
-- **Issue**: [Link will be added after issue creation]
+- **Issue**: https://github.com/biomejs/biome/issues/7388
 - **Repository**: https://github.com/schickling-repros/2025-09-biome-lsp-pnpm-node-modules-bug
 
 ## 🔍 Expected Behavior
